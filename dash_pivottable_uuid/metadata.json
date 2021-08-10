@@ -1,0 +1,223 @@
+{
+  "src/lib/components/PivotTable.react.js": {
+    "description": "...",
+    "displayName": "PivotTable",
+    "methods": [
+      {
+        "name": "handleChange",
+        "docblock": null,
+        "modifiers": [],
+        "params": [
+          {
+            "name": "state",
+            "type": null
+          }
+        ],
+        "returns": null
+      }
+    ],
+    "props": {
+      "id": {
+        "type": {
+          "name": "string"
+        },
+        "required": false,
+        "description": "The ID used to identify this component in Dash callbacks"
+      },
+      "setProps": {
+        "type": {
+          "name": "func"
+        },
+        "required": false,
+        "description": "Dash-assigned callback that should be called whenever any of the\r\nproperties change"
+      },
+      "data": {
+        "type": {
+          "name": "array"
+        },
+        "required": false,
+        "description": "The input data"
+      },
+      "attrClassified": {
+        "type": {
+          "name": "bool"
+        },
+        "required": false,
+        "description": "attrClassified -- whether to show the unused attributes as classfied",
+        "defaultValue": {
+          "value": "false",
+          "computed": false
+        }
+      },
+      "attrCategory": {
+        "type": {
+          "name": "array"
+        },
+        "required": false,
+        "description": "attribute list",
+        "defaultValue": {
+          "value": "[]",
+          "computed": false
+        }
+      },
+      "unclassifiedAttrName": {
+        "type": {
+          "name": "string"
+        },
+        "required": false,
+        "description": "The name of category for attributes that are not in the attrDict",
+        "defaultValue": {
+          "value": "\"Unclassified\"",
+          "computed": false
+        }
+      },
+      "attrOrder": {
+        "type": {
+          "name": "array"
+        },
+        "required": false,
+        "description": "Specify the default order of attributes",
+        "defaultValue": {
+          "value": "[]",
+          "computed": false
+        }
+      },
+      "attrLabel": {
+        "type": {
+          "name": "object"
+        },
+        "required": false,
+        "description": "The label should have format of {[attrName]: label}",
+        "defaultValue": {
+          "value": "{}",
+          "computed": false
+        }
+      },
+      "selectData": {
+        "type": {
+          "name": "array"
+        },
+        "required": false,
+        "description": "selectData -- data selected by cell click"
+      },
+      "hiddenAttributes": {
+        "type": {
+          "name": "array"
+        },
+        "required": false,
+        "description": "contains attribute names to omit from the UI",
+        "defaultValue": {
+          "value": "[]",
+          "computed": false
+        }
+      },
+      "hiddenFromAggregators": {
+        "type": {
+          "name": "array"
+        },
+        "required": false,
+        "description": "contains attribute names to omit from the aggregator arguments dropdowns",
+        "defaultValue": {
+          "value": "[]",
+          "computed": false
+        }
+      },
+      "hiddenFromDragDrop": {
+        "type": {
+          "name": "array"
+        },
+        "required": false,
+        "description": "contains attribute names to omit from the drag'n'drop portion of the UI",
+        "defaultValue": {
+          "value": "[]",
+          "computed": false
+        }
+      },
+      "menuLimit": {
+        "type": {
+          "name": "number"
+        },
+        "required": false,
+        "description": "maximum number of values to list in the double-click menu",
+        "defaultValue": {
+          "value": "500",
+          "computed": false
+        }
+      },
+      "unusedOrientationCutoff": {
+        "type": {
+          "name": "number"
+        },
+        "required": false,
+        "description": "If the attributes' names' combined length in characters exceeds this\r\nvalue then the unused attributes area will be shown vertically to the\r\nleft of the UI instead of horizontally above it. 0 therefore means\r\n'always vertical', and Infinity means 'always horizontal'.",
+        "defaultValue": {
+          "value": "85",
+          "computed": false
+        }
+      },
+      "cols": {
+        "type": {
+          "name": "array"
+        },
+        "required": false,
+        "description": "Which columns are currently in the column area"
+      },
+      "colOrder": {
+        "type": {
+          "name": "string"
+        },
+        "required": false,
+        "description": "the order in which column data is provided to the renderer, must be one\r\nof \"key_a_to_z\", \"value_a_to_z\", \"value_z_to_a\", ordering by value\r\norders by column total"
+      },
+      "rows": {
+        "type": {
+          "name": "array"
+        },
+        "required": false,
+        "description": "Which rows is currently inside the row area."
+      },
+      "rowOrder": {
+        "type": {
+          "name": "string"
+        },
+        "required": false,
+        "description": "the order in which row data is provided to the renderer, must be one\r\nof \"key_a_to_z\", \"value_a_to_z\", \"value_z_to_a\", ordering by value\r\norders by row total"
+      },
+      "aggregatorName": {
+        "type": {
+          "name": "string"
+        },
+        "required": false,
+        "description": "Which aggregator is currently selected. E.g. Count, Sum, Average, etc."
+      },
+      "vals": {
+        "type": {
+          "name": "array"
+        },
+        "required": false,
+        "description": "Vals for the aggregator."
+      },
+      "valueFilter": {
+        "type": {
+          "name": "object"
+        },
+        "required": false,
+        "description": "Value filter for each attibute name."
+      },
+      "rendererName": {
+        "type": {
+          "name": "string"
+        },
+        "required": false,
+        "description": "Which renderer is currently selected. E.g. Table, Line Chart, Scatter\r\nChart, etc."
+      },
+      "tableOptions": {
+        "type": {
+          "name": "object"
+        },
+        "required": false,
+        "description": "tableOptions -- were clickCallback is placed \r\nit is a Function to call when mouse clicks on cell\r\nfunction(e, value, filters, pivotData)"
+      }
+    }
+  }
+}
