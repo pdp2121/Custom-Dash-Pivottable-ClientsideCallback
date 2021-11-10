@@ -2,8 +2,6 @@
 
 Dash Pivottable is a Dash component wrapping the [react-pivottable library](https://github.com/plotly/react-pivottable/), created by Nicholas at Plotly. It lets you build interactive pivot tables using purely Python.
 
-![pivot table demo](images/pivottable-demo.gif)
-
 We have created a Custom Dash Pivottable component that filters a linked-by-callback data table using cell-clicks on the Dash Pivottable. We utilized the Dash boilerplate to add a clickCallback that fetches matching records of a cell-click into an attribute called selectData of the Dash Pivottable component. This attribute can be used in a user’s program callbacks with the Dash DataTable that is populated with the records from the clicked cell. Since the clickCallback to update the data table is executed on the client side, the runtime is seamlessly efficient. We think that this functionality will have many use cases, and we wonder if this can be integrated to the current Dash Pivottable in the future.
 
 Below is an example of the custom component linked to a Dash DataTable in action. Notice that the pivot table is used as a filter, and the data table’s title reflects number of observations resulting from each cell-click filter:
