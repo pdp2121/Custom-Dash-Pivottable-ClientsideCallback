@@ -4,6 +4,16 @@ Dash Pivottable is a Dash component wrapping the [react-pivottable library](http
 
 ![pivot table demo](images/pivottable-demo.gif)
 
+We have created a Custom Dash Pivottable component that filters a linked-by-callback data table using cell-clicks on the Dash Pivottable. We utilized the Dash boilerplate to add a clickCallback that fetches matching records of a cell-click into an attribute called selectData of the Dash Pivottable component. This attribute can be used in a user’s program callbacks with the Dash DataTable that is populated with the records from the clicked cell. Since the clickCallback to update the data table is executed on the client side, the runtime is seamlessly efficient. We think that this functionality will have many use cases, and we wonder if this can be integrated to the current Dash Pivottable in the future.
+
+Below is an example of the custom component linked to a Dash DataTable in action. Notice that the pivot table is used as a filter, and the data table’s title reflects number of observations resulting from each cell-click filter:
+
+![custom pivot table demo](images/athl_demo.gif)
+
+(Data source: [120 years of Olympic history: athletes and results](https://www.kaggle.com/heesoo37/120-years-of-olympic-history-athletes-and-results))
+
+We like to start a conversation with the community to know how to best contribute the custom Dash Pivottable coupled with a client side callback to a Dash DataTable. An alternative is to extend the Dash Pivottable component with a built-in data table. We look forward to a conversation on these approaches. We will also be offering to the community enhancements to the Dash Pivottable and its underlying react-pivottable that comprise the Custom Dash Pivottable. We also have fix to Issue #109, ClickCallback with more than one column attribute does not function right for react-pivottable. This will be in a separate posting.
+
 ## Getting Started
 
 Make sure to clone this project, create a venv and install requirements:
